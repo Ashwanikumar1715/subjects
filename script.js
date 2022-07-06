@@ -27,18 +27,21 @@ function scrollAppear() {
   window.addEventListener('scroll', scrollAppear);
   
   // For switching between navigation menus in mobile mode
-  var i = 2;
+ var i = 2;
   function switchTAB() {
       var x = document.getElementById("list-switch");
       if(i%2 == 0) {
-          document.getElementById("list-switch").style= "display: grid; height: 50vh; margin-left: 5%;";
+          document.getElementById("list-switch").style= "display: flex; flex-direction: column;justify-content: space-between; height: 50vh; margin-left: 10%; ";
           document.getElementById("search-switch").style= "display: block; margin-left: 5%;";
+          document.getElementById("switch-tab").style="padding:5vh;";
+          document.getElementsByClassName("li").style= "font-size: 30px;";
       }else {
-          document.getElementById("list-switch").style= "display: none;";
+          document.getElementById("list-switch").style= "display: none; height: 10vh; ";
           document.getElementById("search-switch").style= "display: none;";
       }
       i++;
   }
+  
   
   // For LOGIN
   var x = document.getElementById("login");
